@@ -1,1 +1,28 @@
-Coming Soon...
+<html>
+<head>
+  <title>SixCode</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="sixcode.js"></script>
+</head>
+<body>
+  <div class="container" style="top: 10%; left: 5%; height: 5%; width: 40%;">
+    <img src="run.png" onclick="runCode();" class="menuButton" style="right: 5%;" />
+  </div>
+  <div id="canvas" class="container" style="top: 20%; left: 5%; height: 60%; width: 40%;">
+    <p>Canvas</p>
+  </div>
+  <input id="projectName" class="container" placeholder="Project Name" style="top: 85%; left: 5%; height: 5%; width: 40%; font-size: 150%;"></input>
+  <textarea id="codeInput" class="container" placeholder="Type your code here" style="top: 10%; left: 55%; height: 25%; width: 40%;"></textarea>
+  <div class="container" style="top: 40%; left: 55%; height: 25%; width: 40%;">
+    <img src="blocks/intro.png" style="position: absolute; top: 5%; left: 5%; height: 15%; width: 20%;" onclick="blockCmd('intro#');" />
+    <img src="blocks/addText.png" style="position: absolute; top: 5%; left: 30%; height: 15%; width: 20%;" onclick="blockCmd('add text#Type your message here#');" />
+    <img src="blocks/playSound.png" style="position: absolute; top: 5%; left: 55%; height: 15%; width: 20%;" onclick="blockCmd('play sound#Type the sound name here#');" />
+    <img src="blocks/background.png" style="position: absolute; top: 30%; left: 5%; height: 40%; width: 20%;" onclick="blockCmd('background#Type the background name here#');" />
+    <img src="blocks/newLine.png" style="position: absolute; top: 30%; left: 30%; height: 40%; width: 20%;" onclick="blockCmd('new line#');" />
+    <img src="blocks/addPicture.png" style="position: absolute; top: 30%; left: 55%; height: 40%; width: 20%;" onclick="blockCmd('add picture#Type the picture name here#');" />
+  </div>
+  <div id="log" class="container" style="top: 70%; left: 55%; height: 20%; width: 40%;">
+    <p>Project Log</p>
+  </div>
+</body>
+</html>
