@@ -1,0 +1,17 @@
+p, input {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.container {
+  position: absolute;
+  resize: none;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  overflow: auto;
+}
+.menuButton {
+  position: absolute;
+  top: 5%;
+  width: 5%;
+  height: 90%;
+}
