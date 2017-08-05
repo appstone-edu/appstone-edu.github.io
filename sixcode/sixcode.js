@@ -56,16 +56,16 @@ function runCode() {
       canvas.innerHTML = canvas.innerHTML + "<br />";
       break;
       case "add picture":
-      canvas.innerHTML = canvas.innerHTML + "<img src='image/" + commands[counter + 1] + ".jpg' style='width: 50px' />";
+      canvas.innerHTML = canvas.innerHTML + "<img src='image/" + commands[counter + 1].toLowerCase() + ".jpg' style='width: 50px' />";
       counter = counter + 1;
       break;
       case "background":
-      canvas.innerHTML = canvas.innerHTML + "<img src='background/" + commands[counter + 1] + ".jpg' style='z-index: -1; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;' />";
+      canvas.innerHTML = canvas.innerHTML + "<img src='background/" + commands[counter + 1].toLowerCase() + ".jpg' style='z-index: -1; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%;' />";
       counter = counter + 1;
       break;
       case "play sound":
       soundIdCounter = soundIdCounter + 1;
-      canvas.innerHTML = canvas.innerHTML + "<audio id='sound-" + soundIdCounter + "' src='sound/" + commands[counter + 1] + ".wav' />";
+      canvas.innerHTML = canvas.innerHTML + "<audio id='sound-" + soundIdCounter + "' src='sound/" + commands[counter + 1].toLowerCase() + ".wav' />";
       document.getElementById("sound-" + soundIdCounter).play();
       counter = counter + 1;
       break;
