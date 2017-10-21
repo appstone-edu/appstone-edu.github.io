@@ -28,9 +28,11 @@ function updateInputs(number, base) {
   if (number === "") {
     document.getElementById("binaryImg").style.height = "0px";
     document.getElementById("binaryImg").style.width = "0px";
+    document.getElementById("binaryImg").style.borderStyle = "none";
   } else {
     document.getElementById("binaryImg").style.height = Math.sqrt(imgBits) * 50 + "px";
     document.getElementById("binaryImg").style.width = Math.sqrt(imgBits) * 50 + "px";
+    document.getElementById("binaryImg").style.borderStyle = "solid";
   }
   var counter2 = 0;
   document.getElementById("binaryImg").innerHTML = "";
