@@ -1,5 +1,5 @@
 <p><input placeholder="Hexatridecimal" oninput="updateInputs(this.value, 36);" /> = <input placeholder="Hexadecimal" oninput="updateInputs(this.value, 16);" /> = <input placeholder="Denary" oninput="updateInputs(this.value, 10);" /> = <input placeholder="Binary" oninput="updateInputs(this.value, 2);" />(<span>0</span> bit)</p>
-<div id="binaryImg" style="position: absolute;"></div>
+<div id="binaryImg" style="position: absolute; border-style: solid;"></div>
 <style>
 .binaryImgSquare {
   position: absolute;
@@ -34,6 +34,8 @@ function updateInputs(number, base) {
     if (document.getElementsByTagName("input")[3].value.charAt(counter2) === "1") {
       document.getElementsByClassName("binaryImgSquare")[counter2].style.backgroundColor = "black";
     }
+    document.getElementById("binaryImg").style.height = Math.sqrt(imgBits) * 50 + "px";
+    document.getElementById("binaryImg").style.width = Math.sqrt(imgBits) * 50 + "px";
     counter2 = counter2 + 1;
   }
 }
