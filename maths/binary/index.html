@@ -25,6 +25,13 @@ function updateInputs(number, base) {
   document.getElementsByTagName("span")[0].innerHTML = document.getElementsByTagName("input")[3].value.length;
   //Create Binary Image
   var imgBits = Math.pow(Math.ceil(Math.sqrt(parseInt(document.getElementsByTagName("span")[0].innerHTML))), 2);
+  if (number === "") {
+    document.getElementById("binaryImg").style.height = "0px";
+    document.getElementById("binaryImg").style.width = "0px";
+  } else {
+    document.getElementById("binaryImg").style.height = Math.sqrt(imgBits) * 50 + "px";
+    document.getElementById("binaryImg").style.width = Math.sqrt(imgBits) * 50 + "px";
+  }
   var counter2 = 0;
   document.getElementById("binaryImg").innerHTML = "";
   while (counter2 < imgBits) {
@@ -34,8 +41,6 @@ function updateInputs(number, base) {
     if (document.getElementsByTagName("input")[3].value.charAt(counter2) === "1") {
       document.getElementsByClassName("binaryImgSquare")[counter2].style.backgroundColor = "black";
     }
-    document.getElementById("binaryImg").style.height = Math.sqrt(imgBits) * 50 + "px";
-    document.getElementById("binaryImg").style.width = Math.sqrt(imgBits) * 50 + "px";
     counter2 = counter2 + 1;
   }
 }
