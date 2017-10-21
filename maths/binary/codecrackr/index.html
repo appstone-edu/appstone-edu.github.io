@@ -1,1 +1,55 @@
+<style>
+input {
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  height: 5%;
+  font-size: 200%;
+}
+</style>
+<input style="top: 5%;" />
+<input style="top: 30%;" disabled />
+<button style="position: absolute; top: 15%; left: 40%; width: 20%; height: 10%; font-size: 200%;" onclick="decodeBinary();">Crack the code</button>
+<script>
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+function decodeBinary() {
+  document.getElementsByTagName("input")[0].disabled = true;
+  var binaryInput = document.getElementsByTagName("input")[0].value;
+  var codeScrambleProccess = window.setInterval(function () {
+    var randomCharCounter = 0;
+    document.getElementsByTagName("input")[0].value = "";
+    while (randomCharCounter < binaryInput.length) {
+      document.getElementsByTagName("input")[0].value = document.getElementsByTagName("input")[0].value + alphabet[Math.floor(Math.random() * alphabet.length)];
+      randomCharCounter = randomCharCounter + 1;
+    }
+  }, 50);
+  var counter  = 0;
+  var binaryParts = [];
+  var currentCharacter = "";
+  while (counter < binaryInput.length) {
+    if (binaryInput.charAt(counter) === " ") {
+      binaryParts.push(currentCharacter);
+      currentCharacter = "";
+    } else {
+      currentCharacter = currentCharacter + binaryInput.charAt(counter);
+    }
+    counter = counter + 1;
+  }
+  binaryParts.push(currentCharacter);
 
+  counter = 0;
+  while (counter < binaryParts.length) {
+    binaryParts[counter] = alphabet[parseInt(binaryParts[counter], 2) - 1];
+    counter = counter + 1;
+  }
+
+  counter = 0;
+  var message = "";
+  while (counter < binaryParts.length) {
+    message = message + binaryParts[counter];
+    counter = counter + 1;
+  }
+
+  document.getElementsByTagName("input")[1].value = message;
+}
+</script>
