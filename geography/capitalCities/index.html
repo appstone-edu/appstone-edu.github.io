@@ -1,1 +1,23 @@
-
+<html>
+	<head>
+		<title>Capital City Quiz</title>
+		<script src="quiz.js"></script>
+		<link rel="shortcut icon" href="globeIcon.ico" />
+		<link rel="stylesheet" href="style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu|Vollkorn+SC|Gochi+Hand" rel="stylesheet">
+		<audio src="sounds/correct.mp3"></audio>
+		<audio src="sounds/incorrect.mp3"></audio>
+	</head>
+	<body>
+		<img class="borderImg" src="images/globe3d.png" style="top: 20px; left: 20px;" />
+		<img class="borderImg" src="images/globeFuturistic.png" style="top: 20px; right: 20px;" />
+		<p style="font-size: 60px; font-family: 'Vollkorn SC', serif;">Capital City Quiz</p>
+		<p>Your score: <span id="score">0</span></p>
+		<div id="questionBox">
+			<br />
+			<button onclick="quiz.nextQuestion();">Start</button>
+			<br />
+			<p style="font-size: 5px;">Capital City Game by Archie Baer</p>
+		</div>
+	</body>
+</html>

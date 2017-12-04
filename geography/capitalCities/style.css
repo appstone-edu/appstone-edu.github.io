@@ -1,0 +1,44 @@
+body {
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	text-align: center;
+}
+
+.borderImg {
+	position: fixed;
+	width: 50px;
+}
+
+p {
+	color: white;
+	font-size: 40px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#questionBox {
+	border-style: solid;
+	border-color: white;
+	border-width: 5px;
+	min-height: 50px;
+	width: 80%;
+	position: relative;
+	left: 10%;
+}
+
+#questionBox:hover {
+	cursor: help;
+}
+
+button {
+	background: none;
+	color: white;
+	border-style: groove;
+	border-color: white;
+	font-size: 50px;
+	border-width: 5px;
+	font-family: 'Gochi Hand', cursive;
+}
+
+button:active {
+	font-size: 40px;
+	border-style: solid;
+}
