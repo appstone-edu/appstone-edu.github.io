@@ -11,7 +11,7 @@ var quiz = {
 		"Cape Verde" : "Praia",
 		"Chile" : "Santiago",
 		"Cyprus" : "Nicosia",
-		"Denmark" : "Djibouti",
+		"Denmark" : "Copenhagen",
 		"Dominica" : "Roseau",
 		"Egypt" : "Cairo",
 		"Ethiopia" : "Addis Ababa",
