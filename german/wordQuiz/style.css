@@ -1,0 +1,14 @@
+body {
+	background: linear-gradient(141deg, lightblue, orange);
+	text-align: center;
+}
+
+p, input, button {
+	color: white;
+	font-family: 'Lobster', cursive;
+}
+
+input, button {
+	background: none;
+	border: white solid;
+}
